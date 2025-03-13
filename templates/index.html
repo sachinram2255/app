@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Upload a PDF and Convert to Speech</h1>
+    
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload and Extract Text</button>
+
+    <h2>Extracted Text</h2>
+    <textarea id="textOutput" rows="6" readonly></textarea>
+
+    <button onclick="convertToSpeech()">Convert to Speech</button>
+
+    <h2>Audio Output</h2>
+    <audio id="audioPlayer" controls></audio>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
